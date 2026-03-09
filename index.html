@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ericka Allen | Software Engineer</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .background-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .gradient-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 2;
+        }
+
+        .content {
+            position: relative;
+            z-index: 3;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            width: 50%;
+            max-width: 50%;
+        }
+
+        h1 {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.25rem;
+            color: #ccc;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #333;
+            width: 60px;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .bio {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            color: #999;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            padding-right: 1rem;
+        }
+
+        .tagline {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.25rem;
+            color: #ccc;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 3rem;
+            line-height: 1.5;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 1.25rem;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .link:hover {
+            background: #fff;
+            color: #0a0a0a;
+            transform: translateY(-3px);
+        }
+
+        .link svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (max-width: 1000px) {
+            body {
+                overflow-y: auto;
+            }
+
+            .background-image {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 4 / 5;
+            }
+
+            .background-image img {
+                mask-image: none;
+                -webkit-mask-image: none;
+            }
+
+            .gradient-overlay {
+                position: absolute;
+                background: linear-gradient(to bottom,
+                    transparent 0%,
+                    transparent 70%,
+                    rgba(10, 10, 10, 0.3) 85%,
+                    #0a0a0a 100%
+                );
+            }
+
+            .content {
+                position: relative;
+                min-height: auto;
+                padding: 3rem 2rem;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            .tagline {
+                margin-bottom: 2rem;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
+            .bio {
+                max-width: 70%;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <img src="profile-photo.jpg" alt="Ericka Allen">
+    </div>
+    <div class="gradient-overlay"></div>
+
+    <div class="content">
+        <h1>Ericka Allen</h1>
+        <p class="title">Software Engineer<br>FEA Create/HighLevel Expert</p>
+        <hr class="divider">
+        <p class="bio">I started my career in the multifaceted world of startups, where I spent nearly a decade building apps and solving complex problems. But honestly...my passion wasn't the code itself. It's what we can create with the right tools.<br><br>Now I'm using my experience to help women feel supported by technology, rather than frustrated by it. I partner with female founders and entrepreneurs to bring their digital ideas to life and implement automated systems so they can run their businesses with ease and confidence.</p>
+        <div class="links">
+            <a href="mailto:ericka.allen@gmail.com" class="link" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/erickaallen/" target="_blank" rel="noopener noreferrer" class="link" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <!-- Hidden for now
+            <a href="https://www.higherrealmsdigital.com" target="_blank" rel="noopener noreferrer" class="link" title="Higher Realms Digital">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+            </a>
+            -->
+        </div>
+    </div>
+</body>
+</html>
